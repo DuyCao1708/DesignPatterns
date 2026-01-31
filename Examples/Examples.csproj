@@ -20,7 +20,6 @@
     <Folder Include="Patterns\Behavioral\Visitor\" />
     <Folder Include="Patterns\Creational\AbstractFactory\" />
     <Folder Include="Patterns\Creational\Builder\" />
-    <Folder Include="Patterns\Creational\Singleton\" />
     <Folder Include="Patterns\Structural\" />
     <Folder Include="Patterns\Structural\Adapter\" />
     <Folder Include="Patterns\Structural\Bridge\" />

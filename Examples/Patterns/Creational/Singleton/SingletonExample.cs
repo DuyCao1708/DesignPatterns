@@ -11,6 +11,7 @@ public class SingletonExample : IPatternExample
 
     public void Run()
     {
-        throw new NotImplementedException();
+        Console.WriteLine(DbContext.Instance.executeQuery("SELECT * FROM Products"));
+        Console.WriteLine(DbContext.Instance.executeQuery("SELECT * FROM Invoices"));
     }
 }

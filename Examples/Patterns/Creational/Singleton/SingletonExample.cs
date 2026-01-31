@@ -13,5 +13,6 @@ public class SingletonExample : IPatternExample
     {
         Console.WriteLine(DbContext.Instance.executeQuery("SELECT * FROM Products"));
         Console.WriteLine(DbContext.Instance.executeQuery("SELECT * FROM Invoices"));
+        Console.WriteLine("The DbContext instance was created once for both 2 queries.");
     }
 }

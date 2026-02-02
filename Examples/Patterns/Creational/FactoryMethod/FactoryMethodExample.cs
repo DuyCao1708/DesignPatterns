@@ -11,6 +11,13 @@ public class FactoryMethodExample : IPatternExample
 
     public void Run()
     {
-        throw new NotImplementedException();
+        SendExampleNotification(new EmailSenderFactory());
+        SendExampleNotification(new SMSSenderFactory());
+    }
+
+    public void SendExampleNotification(NotificationSenderFactory senderFactory)
+    {
+        // The code works without knowing the exact concrete factory
+        senderFactory.SendNotification("user123", "Hello there");
     }
 }

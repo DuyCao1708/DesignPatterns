@@ -1,6 +1,6 @@
 namespace Examples.Patterns.Behavioral.Observer;
 
-public interface IStock : IStockObservable
+public interface IStock : IObservable<IStock>
 {
     public string Name { get; }
     public double Price { get; }

@@ -1,43 +1,42 @@
 namespace Examples.Patterns.Behavioral.Observer;
 
-public class Stock : IStock
+public abstract class Stock : IStock
 {
-    public string Name { get; }
+    public abstract string Name { get; }
 
     private double _price { get; set; }
 
     public double Price => _price;
 
-    public Stock(string name, double price)
+    public Stock(double price)
     {
-        Name = name;
         _price = price;
     }
 
-    private readonly List<IStockObserver> _observers = new List<IStockObserver>();
+    private readonly List<ISubcriber<IStock>> _subscribers = new List<ISubcriber<IStock>>();
 
-    public void NotifyObservers()
+    public void NotifyToSubscribers()
     {
-        foreach (var observer in _observers)
+        foreach (var observer in _subscribers)
         {
             observer.Update(this);
         }
     }
 
-    public void Subscribe(IStockObserver observer)
+    public void Subscribe(ISubcriber<IStock> observer)
     {
-        _observers.Add(observer);
+        _subscribers.Add(observer);
     }
 
-    public void Unsubscribe(IStockObserver observer)
+    public void Unsubscribe(ISubcriber<IStock> observer)
     {
-        _observers.Remove(observer);
+        _subscribers.Remove(observer);
     }
 
     public void UpdateStockPrice(double price)
     {
         _price = price;
-        NotifyObservers();
+        NotifyToSubscribers();
     }
 }
 

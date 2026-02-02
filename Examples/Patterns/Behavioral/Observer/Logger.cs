@@ -1,6 +1,6 @@
 namespace Examples.Patterns.Behavioral.Observer;
 
-public class LoggerObserver : IStockObserver
+public class Logger : ISubcriber<IStock>
 {
     public void Update(IStock stock)
     {

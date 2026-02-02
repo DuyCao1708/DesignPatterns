@@ -11,6 +11,7 @@ public class StrategyExample : IPatternExample
 
     public void Run()
     {
+        Console.WriteLine("Using the same service with different transport strategies");
         var service = new BookingService(new BusTransport());
         service.CalculateCost(20);
         service.CalculateCost(30);

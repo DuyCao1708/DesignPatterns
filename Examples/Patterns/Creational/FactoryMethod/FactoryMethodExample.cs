@@ -11,6 +11,7 @@ public class FactoryMethodExample : IPatternExample
 
     public void Run()
     {
+        Console.WriteLine("Using different factories to create sender and send message");
         SendExampleNotification(new EmailSenderFactory());
         SendExampleNotification(new SMSSenderFactory());
     }

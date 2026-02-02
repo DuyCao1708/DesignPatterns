@@ -11,6 +11,14 @@ public class StrategyExample : IPatternExample
 
     public void Run()
     {
-        throw new NotImplementedException();
+        var service = new BookingService(new BusTransport());
+        service.CalculateCost(20);
+        service.CalculateCost(30);
+
+        service.SetTransport(new TaxiTransport());
+        service.CalculateCost(20);
+
+        service.SetTransport(new BicycleTransport());
+        service.CalculateCost(20);
     }
 }

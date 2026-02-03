@@ -12,6 +12,16 @@ public class StateExample : IPatternExample
 
     public void Run()
     {
-        throw new NotImplementedException();
+        var vendingMachine = new VendingMachine();
+
+        Console.WriteLine("Insert a coin into the vending machine");
+        vendingMachine.InsertCoin();
+        Console.WriteLine("\nPress the button");
+        vendingMachine.PressButton();
+
+        Console.WriteLine("\nInsert another coin into the vending machine");
+        vendingMachine.InsertCoin();
+        Console.WriteLine("\nPress the button");
+        vendingMachine.PressButton();
     }
 }

@@ -11,6 +11,9 @@ public class FacadeExample : IPatternExample
 
     public void Run()
     {
-        throw new NotImplementedException();
+        var theater = new HomeTheaterFacade(new LightControl(), new SoundControl(), new TelevisionControl());
+
+        Console.WriteLine("Start movie session");
+        theater.StartMovieSession();
     }
 }

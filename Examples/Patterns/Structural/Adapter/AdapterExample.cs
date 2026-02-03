@@ -11,6 +11,9 @@ public class AdapterExample : IPatternExample
 
     public void Run()
     {
-        throw new NotImplementedException();
+        var printAdapter = new PrintAdapter(new PrintService());
+
+        Console.WriteLine("Print 'Hello World'");
+        printAdapter.SendUsbRequest("Hello World");
     }
 }

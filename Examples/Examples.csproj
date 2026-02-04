@@ -15,7 +15,6 @@
     <Folder Include="Patterns\Behavioral\Mediator\" />
     <Folder Include="Patterns\Behavioral\Memento\" />
     <Folder Include="Patterns\Behavioral\Visitor\" />
-    <Folder Include="Patterns\Creational\AbstractFactory\" />
     <Folder Include="Patterns\Creational\Builder\" />
     <Folder Include="Patterns\Structural\Bridge\" />
     <Folder Include="Patterns\Structural\Composite\" />

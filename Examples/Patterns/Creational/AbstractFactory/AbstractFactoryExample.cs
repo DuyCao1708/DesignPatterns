@@ -11,7 +11,17 @@ public class AbstractFactoryExample : IPatternExample
 
     public void Run()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Simulate an art deco style room");
+        var artDecoSimulator = new FurnitureSimulator(new ArtDecoFurnitureFactory());
+        artDecoSimulator.ShowRoom();
+
+        Console.WriteLine("\nSimulate a modern style room");
+        var modernSimulator = new FurnitureSimulator(new ModernFurnitureFactory());
+        modernSimulator.ShowRoom();
+
+        Console.WriteLine("\nSimulate a victorian style room");
+        var victorianSimulator = new FurnitureSimulator(new VictorianFurnitureFactory());
+        victorianSimulator.ShowRoom();
     }
 
 }

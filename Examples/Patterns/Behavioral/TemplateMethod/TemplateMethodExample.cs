@@ -11,6 +11,10 @@ public class TemplateMethodExample : IPatternExample
 
     public void Run()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Process on local invoice");
+        new LocalInvoice().ProcessInvoice();
+
+        Console.WriteLine("\nProcess on export invoice");
+        new ExportInvoice().ProcessInvoice();
     }
 }

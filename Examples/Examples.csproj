@@ -16,7 +16,6 @@
     <Folder Include="Patterns\Behavioral\Visitor\" />
     <Folder Include="Patterns\Creational\Builder\" />
     <Folder Include="Patterns\Structural\Bridge\" />
-    <Folder Include="Patterns\Structural\Composite\" />
     <Folder Include="Patterns\Structural\Flyweight\" />
   </ItemGroup>
 

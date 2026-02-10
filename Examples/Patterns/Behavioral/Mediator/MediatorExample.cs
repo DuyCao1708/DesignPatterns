@@ -11,6 +11,9 @@ public class MediatorExample : IPatternExample
 
     public void Run()
     {
-        throw new NotImplementedException();
+        var system = new AutomationSystem();
+
+        Console.WriteLine("Simulate Good Morning routine");
+        system.SimulateGoodMorningRoutine();
     }
 }

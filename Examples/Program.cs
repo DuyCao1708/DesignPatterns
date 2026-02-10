@@ -40,6 +40,7 @@ else
     if (int.TryParse(input, out int choice) && choice > 0 && choice <= flatList.Count)
     {
         Console.Clear();
+        Console.WriteLine();
         flatList[choice - 1].Run();
     }
 }

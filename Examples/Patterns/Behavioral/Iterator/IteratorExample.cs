@@ -12,6 +12,28 @@ public class IteratorExample : IPatternExample
 
     public void Run()
     {
-        throw new NotImplementedException();
+        IWarehouseSection<string> section = new SmallSection();
+        IIterator<string> scanner = section.CreateScanner();
+        Console.WriteLine("Items in small section");
+        while (scanner.HasMore())
+        {
+            Console.WriteLine(scanner.GetNext());
+        }
+
+        section = new LegacySection();
+        scanner = section.CreateScanner();
+        Console.WriteLine("\nItems in legacy section");
+        while (scanner.HasMore())
+        {
+            Console.WriteLine(scanner.GetNext());
+        }
+
+        section = new FragileSection();
+        scanner = section.CreateScanner();
+        Console.WriteLine("\nItems in fragile section");
+        while (scanner.HasMore())
+        {
+            Console.WriteLine(scanner.GetNext());
+        }
     }
 }

@@ -11,6 +11,19 @@ public class ChainOfResponsibilityExample : IPatternExample
 
     public void Run()
     {
-        throw new NotImplementedException();
+        var juniorHandler = new JuniorHandler();
+
+        juniorHandler
+        .SetNext(new SeniorHandler())
+        .SetNext(new EngineerHandler());
+
+        Console.WriteLine("Simple request");
+        juniorHandler.Handle(new Request() { IsBug = true, IsComplex = false });
+
+        Console.WriteLine("\nComplex request");
+        juniorHandler.Handle(new Request() { IsBug = false, IsComplex = true });
+
+        Console.WriteLine("\nBug request");
+        juniorHandler.Handle(new Request() { IsBug = true, IsComplex = true });
     }
 }

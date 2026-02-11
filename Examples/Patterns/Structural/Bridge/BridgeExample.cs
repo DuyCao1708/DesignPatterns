@@ -11,6 +11,24 @@ public class BridgeExample : IPatternExample
 
     public void Run()
     {
-        throw new NotImplementedException();
+        IOperationSystemDownloader os = new WindowsDownloader();
+
+        FileDownloader downloader = new SimpleFileDownloader(os);
+        Console.WriteLine("Use Windows simple downloader");
+        downloader.Download("https://file-csv/123abc");
+
+        downloader = new SecureFileDownloader(os);
+        Console.WriteLine("Use Windows secure downloader");
+        downloader.Download("https://file-dat/123abc");
+
+        os = new LinuxDownloader();
+
+        downloader = new SimpleFileDownloader(os);
+        Console.WriteLine("Use Linux simple downloader");
+        downloader.Download("https://file-csv/123abc");
+
+        downloader = new SecureFileDownloader(os);
+        Console.WriteLine("Use Linux secure downloader");
+        downloader.Download("https://file-dat/123abc");
     }
 }

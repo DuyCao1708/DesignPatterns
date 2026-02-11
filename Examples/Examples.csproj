@@ -12,7 +12,6 @@
     <Folder Include="Interfaces\" />
     <Folder Include="Patterns\Behavioral\Iterator\" />
     <Folder Include="Patterns\Creational\Builder\" />
-    <Folder Include="Patterns\Structural\Bridge\" />
   </ItemGroup>
 
 </Project>

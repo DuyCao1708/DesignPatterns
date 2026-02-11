@@ -11,6 +11,13 @@ public class PrototypeExample : IPatternExample
 
     public void Run()
     {
-        throw new NotImplementedException();
+        var widget = new Widget() { Data = "123abc", Styles = "display: block;" };
+        var clone = widget.Clone();
+
+        Console.WriteLine("Render base widget");
+        widget.Render();
+
+        Console.WriteLine("\nRender clone widget");
+        clone.Render();
     }
 }

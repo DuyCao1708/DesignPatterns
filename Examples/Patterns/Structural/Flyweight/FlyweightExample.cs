@@ -11,6 +11,12 @@ public class FlyweightExample : IPatternExample
 
     public void Run()
     {
-        throw new NotImplementedException();
+        var factory = new SoldierFactory();
+
+        Console.WriteLine("Create 2 soldiers with the same type");
+        factory.ProduceSoldier((0, 0), 100, "RedSkin", "HumanModel");
+        factory.ProduceSoldier((10, 5), 80, "RedSkin", "HumanModel");
+
+        factory.Render();
     }
 }

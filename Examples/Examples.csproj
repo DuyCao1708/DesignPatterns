@@ -14,7 +14,6 @@
     <Folder Include="Patterns\Behavioral\Memento\" />
     <Folder Include="Patterns\Creational\Builder\" />
     <Folder Include="Patterns\Structural\Bridge\" />
-    <Folder Include="Patterns\Structural\Flyweight\" />
   </ItemGroup>
 
 </Project>

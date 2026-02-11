@@ -40,5 +40,5 @@ dotnet run
 
 ```bash
 dotnet run -- "bridge"
-dotnet run -- "chain of respontibility"
+dotnet run -- "chain of responsibility"
 ```
